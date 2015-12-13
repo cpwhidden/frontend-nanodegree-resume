@@ -3,19 +3,19 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-	name : "Chris Whidden",
-	role : "Software Developer",
-	contactInfo : {
-		email : "Christopher.Whidden@gmail.com",
-		location : "Rochester, MN"
+	"name" : "Chris Whidden",
+	"role" : "Software Developer",
+	"contactInfo" : {
+		"email" : "Christopher.Whidden@gmail.com",
+		"location" : "Rochester, MN"
 	},
-	pictureURL : "images/Me.jpg",
-	welcomeMessage : "Thanks for taking the opportunity to know more about me!",
-	skills : ["Swift", "iOS", "Xcode", "HTML", "CSS"]
+	"pictureURL" : "images/Me.jpg",
+	"welcomeMessage" : "Thanks for taking the opportunity to know more about me!",
+	"skills" : ["Swift", "iOS", "Xcode", "HTML", "CSS"]
 };
 
 var work = {
-	jobs: [
+	"jobs": [
 	{
 		"position" : "Independent Software Developer",
 		"employer" : "Self-employed",
@@ -65,7 +65,7 @@ var education = {
 		"url" : "http://www.pce.uw.edu/certificates/database-management.html"
 	}
 	]
-}
+};
 
 var projects = {
 	"project" : [
@@ -81,7 +81,7 @@ var projects = {
 		"description" : "Display of my works",
 		"images" : []
 	}]
-}
+};
 
 
 $("#main").append(internationalizeButton);
