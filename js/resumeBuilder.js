@@ -43,6 +43,12 @@ var education = {
 		"minor": "Ancient Greek",
 		"url" : "http://www.csbsju.edu/",
 		"dates" : "2003-2007"
+	},
+	{
+		"name": "Southwest University",
+		"location": "Beibei, China",
+		"degree" : "Study Abroad",
+		"dates" : "2005-2006"
 	}
 	],
 	"onlineCourses" : [
@@ -152,8 +158,24 @@ education.display = function() {
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		var formattedMajor;
+		if (education.schools[school].major !== undefined) {
+			formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		} else {
+			formattedMajor = "";
+		}
 		$(".education-entry:last").append(formattedName + formattedDegree  + formattedDates + formattedLocation + formattedMajor);
+	}
+	if (education.onlineCourses.length > 0) {
+		$("#education").append(HTMLonlineClasses);
+	}
+	for (course in education.onlineCourses) {
+		$("#education").append(HTMLschoolStart);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		$(".education-entry:last").append(formattedTitle + formattedSchool + formattedDates + formattedURL);
 	}
 }
 
