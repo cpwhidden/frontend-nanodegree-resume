@@ -12,7 +12,7 @@ var bio = {
 		"twitter" : "https://twitter.com/cpwhidden",
 		"location" : "Rochester, MN"
 	},
-	"welcomeMessage" : "Thanks for taking the opportunity to know more about me!",
+	"welcomeMessage" : "Looking to connect with the best and brightest",
 	"skills" : ["Swift", "iOS", "Xcode", "HTML", "CSS"],
 	"biopic" : "images/Me.jpg",
 	"display" : function() {
@@ -20,7 +20,8 @@ var bio = {
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var bioPic = HTMLbioPic.replace("%data%", bio.biopic);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-		$("#header").prepend(bioPic + formattedName + formattedRole);
+		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+		$("#header").prepend(bioPic + formattedName + formattedRole + formattedWelcomeMsg);
 
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
