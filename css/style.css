@@ -65,6 +65,14 @@ h5 {
 
 }
 
+#title, #name {
+  white-space: nowrap;
+}
+
+#title {
+  display: flex;
+}
+
 
 .date-text {
   font-style: italic;
@@ -118,7 +126,8 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 .orange {
@@ -147,6 +156,7 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  display: block;
 }
 
 .flex-box {

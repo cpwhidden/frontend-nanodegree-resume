@@ -7,6 +7,7 @@ var bio = {
 	"role" : "Software Developer",
 	"contactInfo" : {
 		"email" : "Christopher.Whidden@gmail.com",
+		"github" : "http://www.github.com/cpwhidden",
 		"location" : "Rochester, MN"
 	},
 	"pictureURL" : "images/Me.jpg",
@@ -91,6 +92,9 @@ bio.display = function() {
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var bioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
 	$("#header").prepend(bioPic + formattedName + formattedRole);
+
+	var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
+	$("#topContacts").append(formattedEmail);
 
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
