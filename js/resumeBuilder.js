@@ -164,14 +164,3 @@ $(document).click(function(loc) {
 })
 
 $("#mapDiv").append(googleMap);
-
-// var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
-// var formattedPic = HTMLbioPic.replace("%data%", bio.pictureURL);
-// var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-// var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-// var formattedPosition = HTMLworkTitle.replace("%data%", bio.work.position);
-// var formattedEducation = HTMLschoolName.replace("%data%", bio.education.name);
-
-//$("#header").prepend(formattedName + formattedRole + formattedPic + formattedEmail + formattedWelcomeMsg + formattedSkills);
-// $("#main").prepend(formattedPosition);
-// $("#main").prepend(formattedEducation);
