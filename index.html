@@ -14,6 +14,7 @@ The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
+
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
@@ -50,6 +51,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <meta name="viewport" content="width=device-width">
 </head>
+
 <body>
   <div id="main">
 
@@ -78,7 +80,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="lets-connect" class="dark-gray">
       <h2 class="green center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
+      <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
   </div>
@@ -113,27 +115,28 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         an opening and closing set of slash asterisks for block comments.
     */
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.backgroundColor = "black";
     }
-    if(document.getElementsByTagName('h1').length === 0) {
+    if (document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').backgroundColor = "black";
     }
-    if(document.getElementsByClassName('work-entry').length === 0) {
+    if (document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.backgroundColor = "black";
-    } 
-    if(document.getElementsByClassName('project-entry').length === 0) {
+    }
+    if (document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.backgroundColor = "black";
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
+    if (document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.backgroundColor = "black";
     }
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.backgroundColor = "black";
     }
-    if(document.getElementById('map') === null) {
+    if (document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.backgroundColor = "black";
     }
   </script>
 </body>
+
 </html>

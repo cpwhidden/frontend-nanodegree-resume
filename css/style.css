@@ -9,8 +9,8 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -61,8 +61,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding: 10px 5%;
 }
 
 #title, #name {
@@ -72,7 +71,6 @@ h5 {
 #title {
   display: flex;
 }
-
 
 .date-text {
   font-style: italic;
@@ -88,7 +86,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -115,7 +112,6 @@ a {
 .education-entry {
   margin-bottom: 10px;
 }
-
 
 .welcome-message {
   font-style: italic;
@@ -146,7 +142,7 @@ a {
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 5px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
@@ -200,25 +196,27 @@ span {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
-  }
+  };
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
-  }
+  };
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
+
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
-  }
+  };
 }
 
 #map {
@@ -237,5 +235,6 @@ span {
   #skills-h3,
   .biopic {
     display: block;
-  }
+  };
 }
+
