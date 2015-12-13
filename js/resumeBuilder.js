@@ -153,11 +153,13 @@ education.display = function() {
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-		$(".education-entry:last").append(formattedName + formattedDegree + formattedMajor + formattedDates + formattedLocation);
+		$(".education-entry:last").append(formattedName + formattedDegree  + formattedDates + formattedLocation + formattedMajor);
 	}
 }
 
 education.display();
+
+$("#footerContacts").append("<a href='https://www.linkedin.com/pub/chris-whidden/69/2a/32b'> <img src='https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png' width='160' height='33' border='0' alt='View Chris Whidden\'s profile on LinkedIn'></a>");
 
 $(document).click(function(loc) {
 	console.log("X:" + loc.pageX + " Y:" + loc.pageY);
