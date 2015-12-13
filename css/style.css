@@ -38,15 +38,15 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #616161;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
+  font-weight: light;
+  font-size: 18px;
+  color: #616161;
   line-height: 22px;
 }
 
@@ -125,17 +125,17 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #7da495;
   text-align: center;
   padding-bottom: 5px;
 }
 
-.orange {
-  background-color: #f5ae23;
+.green {
+  background-color: #7da495;
 }
 
-.orange-text {
-  color: #f5ae23;
+.green-text {
+  color: #7da495;
 }
 
 .white-text {
@@ -150,12 +150,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #616161;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #616161;
   display: block;
 }
 
