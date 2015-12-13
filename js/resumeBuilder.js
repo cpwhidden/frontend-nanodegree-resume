@@ -8,6 +8,8 @@ var bio = {
 	"contactInfo" : {
 		"email" : "Christopher.Whidden@gmail.com",
 		"github" : "http://www.github.com/cpwhidden",
+		"mobile" : "507-398-4723",
+		"twitter" : "https://twitter.com/cpwhidden",
 		"location" : "Rochester, MN"
 	},
 	"pictureURL" : "images/Me.jpg",
@@ -74,13 +76,13 @@ var projects = {
 		"title" : "Flash Time",
 		"dates" : "August 2015",
 		"description" : "iOS flash card app",
-		"images" : []
+		"images" : ["images/flash-time.jpg"]
 	},
 	{
 		"title" : "My Portfolio",
 		"dates" : "December 2015",
 		"description" : "Display of my works",
-		"images" : []
+		"images" : ["images/featured-work.jpg"]
 	}]
 };
 
@@ -91,10 +93,14 @@ bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var bioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contactInfo.location);
 	$("#header").prepend(bioPic + formattedName + formattedRole);
 
 	var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
-	$("#topContacts").append(formattedEmail);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contactInfo.mobile);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contactInfo.github);
+	var formattedTwitter = HTMLmobile.replace("%data%", bio.contactInfo.twitter);
+	$("#topContacts").append(formattedEmail + formattedMobile + formattedGithub + formattedTwitter + formattedLocation);
 
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
@@ -143,7 +149,7 @@ projects.display = function() {
 			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[i].description);
 			var formattedImages = [];
 			for (j in projects.project[i].images) {
-				formattedImages.push(HTMLprojectImage.replace("%data%", projects.project[i].images[j].url));
+				formattedImages.push(HTMLprojectImage.replace("%data%", projects.project[i].images[j]));
 			}
 			$(".project-entry:last").append(formattedTitle + formattedDates + formattedDescription);
 			if (formattedImages.length > 0) {
