@@ -5,7 +5,7 @@ This is empty on purpose! Your code to build the resume will go here.
 var bio = {
 	"name" : "Chris Whidden",
 	"role" : "Software Developer",
-	"contactInfo" : {
+	"contacts" : {
 		"mobile" : "507-398-4723",
 		"email" : "Christopher.Whidden@gmail.com",
 		"github" : "http://www.github.com/cpwhidden",
@@ -19,13 +19,13 @@ var bio = {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var bioPic = HTMLbioPic.replace("%data%", bio.biopic);
-		var formattedLocation = HTMLlocation.replace("%data%", bio.contactInfo.location);
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#header").prepend(bioPic + formattedName + formattedRole);
 
-		var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
-		var formattedMobile = HTMLmobile.replace("%data%", bio.contactInfo.mobile);
-		var formattedGithub = HTMLgithub.replace("%data%", bio.contactInfo.github);
-		var formattedTwitter = HTMLmobile.replace("%data%", bio.contactInfo.twitter);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		var formattedTwitter = HTMLmobile.replace("%data%", bio.contacts.twitter);
 		$("#topContacts").append(formattedEmail + formattedMobile + formattedGithub + formattedTwitter + formattedLocation);
 
 		if (bio.skills.length > 0) {
@@ -43,8 +43,7 @@ var work = {
 		"employer" : "Self-employed",
 		"title" : "Independent Software Developer",
 		"location" : "Rochester, MN",
-		"dates" : "2015-",
-		"city" : "The World",
+		"dates" : "2015-present",
 		"description" : "Independently pursuing iOS apps to be published in the App Store"
 	},
 	{
@@ -52,7 +51,6 @@ var work = {
 		"title" : "Library Assistant/Database Administrator",
 		"location" : "Rochester, MN",
 		"dates" : "2007-2015",
-		"city" : "Rochester, MN",
 		"description" : "Developed and administered databases that improved library functions"
 	}
 	],
@@ -64,8 +62,8 @@ var work = {
 			console.log(formattedEmployer + formattedTitle);
 			$(".work-entry:last").append(formattedEmployer + formattedTitle);
 			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-			var formattedCity = HTMLworkLocation.replace("%data%", work.jobs[job].city);
-			$(".work-entry:last").append(formattedDates + formattedCity);
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			$(".work-entry:last").append(formattedDates + formattedLocation);
 			var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 			$(".work-entry:last").append(formattedDescription);
 		}
@@ -79,28 +77,29 @@ var education = {
 		"location": "Collegeville, MN",
 		"degree": "Bachelor of Arts",
 		"majors": ["English Literature", "Ancient Greek"],
-		"url" : "http://www.csbsju.edu/",
-		"dates" : 2007
+		"dates" : 2007,
+		"url" : "http://www.csbsju.edu/"
 	},
 	{
 		"name": "Southwest University",
 		"location": "Beibei, China",
 		"degree" : "Study Abroad",
 		"majors" : ["Chinese Language"],
-		"dates" : 2006
+		"dates" : 2006,
+		"url" : "http://www.swu.edu.cn/english/"
 	}
 	],
 	"onlineCourses" : [
 	{
 		"title" : "iOS Developer Nanodegree",
 		"school" : "Udacity",
-		"dates" : "May 2015 - August 2015",
+		"date" : 2015,
 		"url" : "https://www.udacity.com/course/ios-developer-nanodegree--nd003"
 	},
 	{
 		"title" : "Certificate in Database Management",
 		"school" : "University of Washington",
-		"dates" : "November 2013 - May 2014",
+		"date" : 2015,
 		"url" : "http://www.pce.uw.edu/certificates/database-management.html"
 	}
 	],
@@ -121,7 +120,7 @@ var education = {
 			$("#education").append(HTMLschoolStart);
 			var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 			var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-			var formattedCourseDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+			var formattedCourseDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
 			var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 			$(".education-entry:last").append(formattedTitle + formattedSchool + formattedCourseDates + formattedURL);
 		}
