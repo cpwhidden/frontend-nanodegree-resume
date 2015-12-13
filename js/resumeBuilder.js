@@ -128,7 +128,7 @@ var education = {
 };
 
 var projects = {
-	"project" : [
+	"projects" : [
 	{
 		"title" : "Flash Time",
 		"dates" : "August 2015",
@@ -142,14 +142,14 @@ var projects = {
 		"images" : ["images/featured-work.jpg"]
 	}],
 	"display" : function() {
-		for (var i = 0; i < projects.project.length; i++) {
+		for (var i = 0; i < projects.projects.length; i++) {
 			$("#projects").append(HTMLprojectStart);
-			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.project[i].title);
-			var formattedDates = HTMLprojectDates.replace("%data%", projects.project[i].dates);
-			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[i].description);
+			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+			var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 			var formattedImages = [];
-			for (var j = 0; j < projects.project[i].images.length; j++) {
-				formattedImages.push(HTMLprojectImage.replace("%data%", projects.project[i].images[j]));
+			for (var j = 0; j < projects.projects[i].images.length; j++) {
+				formattedImages.push(HTMLprojectImage.replace("%data%", projects.projects[i].images[j]));
 			}
 			$(".project-entry:last").append(formattedTitle + formattedDates + formattedDescription);
 			if (formattedImages.length > 0) {
