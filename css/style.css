@@ -18,6 +18,10 @@ h6 {
   overflow: auto;
 }
 
+#projects {
+  padding-bottom: 10px;
+}
+
 .education-entry,
 .work-entry,
 .project-entry {
